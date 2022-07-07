@@ -1,0 +1,49 @@
+div {
+	width: abs(-200); // * Mutlak değerini alır -200 => 200
+}
+
+div {
+	width: ceil(3.2); // * verileni yukarı tam sayıya yuvarlar 3.2 => 4
+}
+
+div {
+	width: floor(3.7); // * verileni aşağı tam sayıya yuvarlar 3.7 => 3
+}
+
+div {
+	width: round(3.7); // * en yakın tam sayıya yuvarlar 3.7 => 4
+}
+
+div {
+	width: percentage(0.834); // * yüzdelik sayıya çevirir 0.834 => 83.4%
+}
+
+div {
+	width: max(1, 4, 3, 8, 5, 20); // * listenin içindeki en büyüğü verir => 20
+}
+
+div {
+	width: min(1, 4, 3, 8, 5, 20); // * listenin içindeki en küçüğü verir => 1
+}
+
+div {
+	width: unit(32px); // * birimini verir => "rem"
+}
+
+div {
+	width: unitless(32); // * birimi yoksa true varsa false döndürür => true
+	height: unitless(32px); // * false
+}
+
+div {
+	width: comparable(
+		1px,
+		2rem
+	); // * karşılaştırılabilir olup olmadıklarına bakar boolean döndürür => false
+	height: comparable(2rem, 5rem); // * true
+}
+
+div {
+	width: random(); // * 0 ile 1 arasında rastgele sayı üretir
+	width: random(100); // *0 ile 100 arasında rastgele tamsayı üretir
+}

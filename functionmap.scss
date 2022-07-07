@@ -1,0 +1,43 @@
+$colors: (
+	primary: blue,
+	warning: yellow,
+	danger: red,
+	success: green,
+	dark: black,
+);
+
+$customColors: (
+	magenta: magenta,
+	lime: lime,
+);
+
+body {
+	background-color: map-get(
+		$colors,
+		primary
+	); // * keyini belirttiğimiz elamanın value'sunu getirir => blue
+}
+
+body {
+	background-color: map-has-key(
+		$colors,
+		dark
+	); // * belirttiğimiz key varmı diye bakar boolean döner => true
+	background-color: map-has-key($colors, metalic); // * false
+}
+
+body {
+	background-color: map-keys(
+		$colors
+	); // * map'ın keylerini getirir => primary, warning, danger, success, dark
+}
+
+body {
+	background-color: map-values(
+		$colors
+	); // * map'ın valuelarını getirir => primary, warning, danger, success, dark
+}
+
+$newColors: map-remove($colors, primary); // * verilen keyi map'den kaldırır
+
+$allColors: map-merge($colors, $customColors); // * verilen mapleri birleştirir

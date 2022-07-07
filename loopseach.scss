@@ -1,0 +1,21 @@
+$colors: blue, black, red, white;
+// ! hex değer varsa error döner
+@each $color in $colors {
+	.bg-#{$color} {
+		background-color: $color;
+	}
+}
+
+$colormap: (
+	dark: #000,
+	primary: blue,
+	warning: yellow,
+	danger: red,
+	success: green,
+);
+
+@each $key, $value in $colormap {
+	.bg-#{$key} {
+		background-color: $value;
+	}
+}

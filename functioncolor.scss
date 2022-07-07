@@ -1,0 +1,32 @@
+$color: rgb(204, 17, 17);
+
+body {
+	background-color: grayscale($color); // * verilen renk ile aynı açıklığa sahip gri rengi verir
+}
+
+body {
+	background-color: complement($color); // * verilen rengin tamamlayıcı rengini verir
+}
+
+body {
+	background-color: invert($color); // * verilen rengin zıt rengini verir
+}
+
+body {
+	background-color: blue(
+		$color
+	); //* verilen rengin rgb'deki kırmızı değerini verir (red,blue,green)
+}
+
+body {
+	background-color: mix(tomato, brown); // * verilen renkleri karıştırır
+	background-color: mix(tomato, brown, 10); // * rengi %10 oranında alır karıştırır
+}
+
+body {
+	background-color: lighten($color, 20); // * rengi verilen oranda açar
+}
+
+body {
+	background-color: darken($color, 20); // * rengi verilen oranda koyultur
+}

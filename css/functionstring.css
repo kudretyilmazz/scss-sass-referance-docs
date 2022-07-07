@@ -1,0 +1,31 @@
+body::after {
+  content: "border";
+}
+
+body::after {
+  content: border;
+}
+
+body::after {
+  content: 3;
+}
+
+body::after {
+  content: "boelmarder";
+}
+
+body::after {
+  content: 6;
+}
+
+body::after {
+  content: "ord";
+}
+
+body::after {
+  content: "BORDER";
+}
+
+body::after {
+  content: uhm5k1k;
+}/*# sourceMappingURL=functionstring.css.map */

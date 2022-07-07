@@ -1,0 +1,35 @@
+body {
+  border: 5px solid white;
+}
+
+body {
+  border: 2;
+}
+
+body {
+  border: true;
+}
+
+body {
+  border: 5px solid 2px dotted;
+}
+
+body {
+  border: 2;
+}
+
+body {
+  border: comma;
+}
+
+body {
+  border: solid;
+}
+
+body {
+  border: nth_set(5px solid, 2, dotted);
+}
+
+body {
+  background: 1px solid black, 5px dotted yellow, 10px groove blue;
+}/*# sourceMappingURL=functionlist.css.map */

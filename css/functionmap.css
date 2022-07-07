@@ -1,0 +1,16 @@
+body {
+  background-color: blue;
+}
+
+body {
+  background-color: true;
+  background-color: false;
+}
+
+body {
+  background-color: primary, warning, danger, success, dark;
+}
+
+body {
+  background-color: blue, yellow, red, green, black;
+}/*# sourceMappingURL=functionmap.css.map */

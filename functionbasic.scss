@@ -1,0 +1,87 @@
+// ! Bir SASS & SCSS fonksiyonu bir değer return etmek zorundadır.
+
+// ? Basit örnek
+@function example() {
+	@return yellow;
+}
+
+// ? Toplama fonksiyonu
+@function topla($sayi1, $sayi2) {
+	@return $sayi1 + $sayi2;
+}
+
+// ? Örnek (interpoliton ile birlikte)
+@function topla($sayi1, $sayi2) {
+	@return #{$sayi1 + $sayi2}px;
+}
+
+.box {
+	background-color: example();
+	width: topla(100, 200); // 300px
+	height: topla(250, 250); // 500px
+}
+
+// ? if/else yapısı ve varsayılan değer ile kullanım örneği
+
+@function themeSwitcher($mode: null) {
+	@if ($mode == "light") {
+		@return #fff;
+	} @else if($mode == "dark") {
+		@return #000;
+	} @else {
+		@return #f2f2f2;
+	}
+}
+
+.box2 {
+	height: 100px;
+	width: 100px;
+	background-color: themeSwitcher(dark);
+}
+
+// ? px to rem convert
+@function pxToRemConverter($px) {
+	@return $px / 16 + rem;
+}
+
+.baslik {
+	font-size: pxToRemConverter(32); // 2rem
+}
+
+// ? Örnek Grid Sistemi
+
+@function gridGenerator($total, $unit) {
+	@return (100 / $total) * $unit + 0%;
+}
+
+.container {
+	width: 100%;
+	height: 200px;
+	display: flex;
+	.box-grid-1 {
+		height: 100px;
+		width: gridGenerator(24, 8);
+		background-color: rgb(16, 25, 189);
+	}
+	.box-grid-2 {
+		height: 100px;
+		width: gridGenerator(24, 16);
+		background-color: #e82b0a;
+	}
+}
+
+// ? SASS/SCSS fonksiyonları bir listeyi parametre olarak alabilirler.
+
+$widths: 50px, 30px, 100px;
+
+@function sum($numbers...) {
+	$sum: 0;
+	@each $number in $numbers {
+		$sum: $sum + $number;
+	}
+	@return $sum;
+}
+
+.micro {
+	width: sum(50px, 30px, 100px); // 180px
+}

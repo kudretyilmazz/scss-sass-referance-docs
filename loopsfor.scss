@@ -1,0 +1,20 @@
+@for $i from 1 through 10 {
+	.font-size-#{$i} {
+		font-size: $i + px;
+	}
+}
+
+// * 10'u dahil etmeden
+@for $i from 1 to 10 {
+	.font-size-#{$i} {
+		font-size: $i + px;
+	}
+}
+
+$colors: blue, red, green, yellow, lime, magenta;
+
+@for $i from 1 through length($colors) {
+	.color-#{$i} {
+		color: nth($list: $colors, $n: $i);
+	}
+}

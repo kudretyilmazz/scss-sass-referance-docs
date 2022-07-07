@@ -1,0 +1,52 @@
+$list: 5px solid;
+$list2: [2px, dotted];
+
+body {
+	border: append($list, white); // * listenin sonuna eleman ekler => 5px solid white
+}
+
+body {
+	border: index($list, solid); // * verdiğim elemanın listedeki index sayısını verir => 2
+}
+
+body {
+	border: is_bracketed($list2); // * köşeli paratenez içindemi kontrolü yapar boolean döner => true
+}
+
+body {
+	border: join($list, $list2); // * listeleri birleştirir => border: 5px solid 2px dotted;
+}
+
+body {
+	border: length($list); // * listenin uzunluğunu verir => 2
+}
+
+body {
+	border: list-separator($list2); // * listedeki seperatörü verir => comma
+}
+
+body {
+	border: nth($list, $n: 2); // * listeden verilen index numaralı elemanı getirir => solid
+}
+
+body {
+	border: nth_set(
+		$list,
+		2,
+		dotted
+	); // * verilen index numarasındaki elemanı değiştirir solid => dotted
+}
+
+$liste1: 1px 5px 10px;
+$liste2: solid dotted groove;
+$liste3: black, yellow, blue;
+
+body {
+	background: zip(
+		$liste1,
+		$liste2,
+		$liste3
+	); // * verilen listelerin elemanlarını dikey olarak birleştirir
+}
+
+// background: 1px solid black, 5px dotted yellow, 10px groove blue;

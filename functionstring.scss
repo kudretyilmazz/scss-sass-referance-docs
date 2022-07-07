@@ -1,0 +1,54 @@
+$value: border;
+$value2: "border";
+
+body {
+	&::after {
+		content: quote($value); // * string'e çevirir border => "border"
+	}
+}
+
+body {
+	&::after {
+		content: unquote($value2); // * string'e çevirir "border" => border
+	}
+}
+
+body {
+	&::after {
+		content: str_index($value2, "r"); // * verilenin index sayısını bulur 3
+	}
+}
+
+body {
+	&::after {
+		content: str_insert(
+			$value2,
+			"elma",
+			3
+		); // * verilen index sayılı elemandan sonra verileni ekler border => boelmarder
+	}
+}
+
+body {
+	&::after {
+		content: str_length($value2); // * verilenin eleman sayısını verir => 6
+	}
+}
+
+body {
+	&::after {
+		content: str_slice($value2, 2, 4); // * verilen index sayılarının arasını keser border => ord
+	}
+}
+
+body {
+	&::after {
+		content: to_upper_case($value2); // * bütün harfleri büyük harfe çevirir border => BORDER
+	}
+}
+
+body {
+	&::after {
+		content: unique_id(); // * random unique id oluşturur
+	}
+}
